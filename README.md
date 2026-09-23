@@ -22,4 +22,11 @@ Run:
 pip install -r requirements.txt
 chroma run --host localhost --port 8000
 streamlit run app.py --server.fileWatcherType none
+<<<<<<< HEAD
 >>>>>>> 0f21fb5 (Day 12: Flash Attention tiling clean + 1997 chunks Agentic RAG verified ✅ 50% HALFWAY)
+=======
+
+## Day 13 — 55% DEPLOYED LIVE ✅
+Public Space: https://huggingface.co/spaces/altonortran/ai-engineer-track2-agentic-rag - Running
+Proof: 1997 chunks indexed | 12→5 retrieve→rerank | 90MB ms-marco-MiniLM | temp 0
+>>>>>>> c60cbbb (Day 13: 55% deployed - HF Space live altonortran/agentic-rag Running ✅)
