@@ -10,3 +10,7 @@ Run:
 pip install -r requirements.txt
 chroma run --host localhost --port 8000
 streamlit run app.py --server.fileWatcherType none
+
+## Day 13 — 55% DEPLOYED LIVE ✅
+Public Space: https://huggingface.co/spaces/altonortran/ai-engineer-track2-agentic-rag - Running
+Proof: 1997 chunks indexed | 12→5 retrieve→rerank | 90MB ms-marco-MiniLM | temp 0
