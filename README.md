@@ -2,7 +2,7 @@
 
 Track 2 AI Engineer | Casablanca | by hibbo67
 
-LIVE HF Space: https://huggingface.co/spaces/altronortran/ai-engineer-track2-agentic-rag
+LIVE HF Space: https://huggingface.co/spaces/altonortran/ai-engineer-track2-agentic-rag
 
 ## Stack
 - 1997 chunks - Full LLM book, 512 tokens overlap 50, ChromaDB + nomic-embed-text
