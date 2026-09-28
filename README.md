@@ -27,3 +27,4 @@ Avg Relevancy: 1.00 | Target 0.80 | PASS | openai/gpt-oss-20b
 Run:
 export GROQ_API_KEY=gsk_...
 python3 eval_day15.py
+
