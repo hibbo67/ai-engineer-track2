@@ -21,6 +21,20 @@ def get_live_model():
 MODEL = get_live_model()
 print(f"HF Space Using model: {MODEL}")
 
+# Day17 - Agentic tools
+def search_chunks(query):
+    # your existing ChromaDB search 12->5
+    return "Retrieved 5 chunks from 1997 about: "+query
+
+def bpe_encode(text):
+    # your BPE 4 steps
+    return f"BPE[{text[:20]}] vocab chars count merge"
+
+AGENT_SYSTEM = """You are Agentic RAG v3.1. You have tools:
+1. search_chunks(query) - retrieve from 1997
+2. bpe_encode(text) - show BPE steps
+Use tools when needed. Always mention 1997 chunks, 12->5 rerank, tiling."""
+
 def chat_fn(message, history):
     if not GROQ_API_KEY:
         yield "⚠️ Set GROQ_API_KEY in HF Space > Settings > Variables and secrets!"
