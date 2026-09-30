@@ -67,4 +67,4 @@ with gr.Blocks(title=f"AI Engineer Track2 - Agentic RAG 1.00 PASS {MODEL}") as d
     gr.ChatInterface(fn=chat_fn, type="messages", examples=["Explain BPE in 4 steps?","What is Flash Attention tiling?","How does 12->5 reranking work?","Why 1997 chunks?"])
 
 if __name__ == "__main__":
-    demo.launch()
+    demo.launch(server_name="0.0.0.0", server_port=7860)
