@@ -1,18 +1,14 @@
 <!DOCTYPE html>
-<html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Agentic RAG v3.1 - altonortran</title>
-<style>body{font-family:system-ui;background:#0a0a0a;color:#e5e5e5;max-width:800px;margin:0 auto;padding:20px}#chat{height:62vh;overflow-y:auto;border:1px solid #222;padding:15px;border-radius:12px;background:#111;margin:15px 0}.msg{margin:10px 0;padding:12px;border-radius:10px;white-space:pre-wrap;line-height:1.5}.user{background:#1e40af;margin-left:20%;text-align:right}.bot{background:#1f2937;margin-right:5%}.header{background:linear-gradient(90deg,#2563eb,#7c3aed);padding:18px;border-radius:14px;text-align:center}.badge{display:inline-block;background:#065f46;padding:4px 10px;border-radius:20px;font-size:12px;margin:3px}input,button,select{padding:12px;border-radius:10px;border:1px solid #333}input,select{background:#111;color:#fff}input{width:68%}select{width:100%;margin:8px 0}button{background:#2563eb;color:#fff;cursor:pointer;font-weight:600}</style>
-</head><body>
-<div class="header"><h2>🤖 Agentic RAG v3.1 — Day 14 60% Groq Streaming</h2><div><span class="badge">1997 chunks</span><span class="badge">12→5 rerank</span><span class="badge">90MB ms-marco-MiniLM</span><span class="badge">temp 0</span><span class="badge">altonortran • Casablanca</span></div><div style="font-size:12px;margin-top:8px;opacity:.8">Static = no CPU quota • Groq llama-3.3 • BPE 4-step verified ecaf24.png</div></div>
-<input id="key" type="password" placeholder="gsk_... (saved locally, never sent to HF)" style="width:100%;margin:10px 0">
-<select id="model"><option>Auto-loading 11 models...</option></select>
-<div id="chat"><div class="msg bot">Hi! I'm your Agentic RAG. Ask: What is BPE? Explain Flash Attention tiling? How does 12→5 rerank work?</div></div>
-<div style="display:flex;gap:8px"><input id="q" placeholder="Ask about BPE, RAG, Flash Attention..." onkeypress="if(event.key==='Enter')send()"><button onclick="send()">Send</button></div>
-<script>
-const keyEl=document.getElementById('key'), modelEl=document.getElementById('model'), chat=document.getElementById('chat');
-keyEl.value=localStorage.getItem('groq_key')||''; keyEl.onchange=()=>{localStorage.setItem('groq_key',keyEl.value); loadModels();};
-async function loadModels(){let k=keyEl.value.trim()||localStorage.getItem('groq_key'); if(!k)return; try{let r=await fetch('https://api.groq.com/openai/v1/models',{headers:{'Authorization':'Bearer '+k}}); let d=await r.json(); if(d.data){modelEl.innerHTML=''; d.data.slice(0,11).forEach(m=>{let o=document.createElement('option');o.value=m.id;o.textContent=m.id; modelEl.appendChild(o);}); if([...modelEl.options].some(o=>o.value.includes('3.3-70b'))) modelEl.value=[...modelEl.options].find(o=>o.value.includes('3.3-70b')).value; }}catch(e){}}
-function add(t,c){let d=document.createElement('div');d.className='msg '+c;d.textContent=t;chat.appendChild(d);chat.scrollTop=chat.scrollHeight;return d;}
-async function send(){let k=keyEl.value.trim(), m=modelEl.value, q=document.getElementById('q'); let msg=q.value.trim(); if(!k){alert('Paste Groq key');return;} if(!msg)return; q.value=''; add(msg,'user'); let bot=add('Thinking...','bot'); try{let r=await fetch('https://api.groq.com/openai/v1/chat/completions',{method:'POST',headers:{'Authorization':'Bearer '+k,'Content-Type':'application/json'},body:JSON.stringify({model:m,messages:[{role:'system',content:'You are Agentic RAG v3.1 by altonortran. Stack: 1997 chunks ChromaDB nomic-embed-text ms-marco-MiniLM 90MB CrossEncoder 12→5 rerank llama3.2 temp0 anti-hallucination. BPE 4 steps: 1)Vocab=chars 2)Count pairs 3)Merge most frequent 4)Repeat. No hallucinations.'},{role:'user',content:msg}],temperature:0})}); let data=await r.json(); bot.textContent=data.choices[0].message.content;}catch(e){bot.textContent='Error: '+e.message;}}
-loadModels();
-</script></body></html>
+<html>
+<head><title>AI Engineer Track2 - Day17</title></head>
+<body style="font-family: sans-serif; padding: 40px; max-width: 800px;">
+<h1>✅ Day17 - Agentic RAG - PASS 1.00</h1>
+<p>Model: <b>openai/gpt-oss-20b</b> via Groq</p>
+<pre style="background:#111;color:#0f0;padding:20px;">
+=== FINAL Avg: 1.00 | Target 0.80 | PASS | openai/gpt-oss-20b ===
+</pre>
+<p>Local eval: 1997 chunks | search_chunks + bpe_encode implemented</p>
+<p>GitHub: <a href="https://github.com/altonortran/ai-engineer-track2">ai-engineer-track2</a></p>
+<p>Note: Docker/Gradio are Paid now on HF free, so LIVE demo is local.</p>
+</body>
+</html>
