@@ -1,0 +1,25 @@
+Using: openai/gpt-oss-20b
+
+Q: Explain BPE in 4 steps?
+A: 
+
+-> 0.00 (0/5)
+
+Q: What is Flash Attention tiling?
+A: Flash Attention tiling is a technique that partitions the attention matrix into smaller blocks that fit into on‑chip SRAM, reducing the need to fetch data from off‑chip HBM. By being IO‑aware, the method schedules memory transfers so that data is streamed from HBM to SRAM just in time for each tile, minimizing latency and bandwidth usage.  
+
+Keywords used: tiling, SRAM, HBM, IO-aware
+
+-> 1.00 (4/4)
+
+Q: How does 12->5 reranking work?
+A: 
+
+-> 0.00 (0/5)
+
+Q: Why 1997 chunks?
+A: Dividing the book into 1997 chunks allows the system to process each section independently, improving parallelism and reducing memory overhead. This approach also makes it easier to retrieve specific parts quickly, as each chunk
+
+-> 1.00 (3/3)
+
+=== FINAL Avg: 0.50 | Target 0.80 | FAIL | openai/gpt-oss-20b ===
