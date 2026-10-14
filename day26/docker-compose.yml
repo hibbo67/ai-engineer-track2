@@ -1,0 +1,29 @@
+version: '3.8'
+services:
+  rag-api:
+    build:
+      context:..
+      dockerfile: day26/Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      - GROQ_API_KEY=${GROQ_API_KEY}
+      - LANGSMITH_TRACING=false
+      - LANGCHAIN_API_KEY=${LANGCHAIN_API_KEY:-}
+    volumes:
+      -../chroma_db:/app/chroma_db
+      -./traces.jsonl:/app/day26/traces.jsonl
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    restart: unless-stopped
+
+  # Optional: ChromaDB server (if you want remote)
+  # chroma:
+  # image: chromadb/chroma:latest
+  # ports:
+  # - "8001:8000"
+  # volumes:
+  # -./chroma_data:/chroma/chroma
