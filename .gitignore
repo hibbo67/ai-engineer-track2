@@ -1,42 +1,14 @@
-venv/
-__pycache__/
-*.pyc
-.env
-*.pdf:Zone.Identifier
-*.PDF:Zone.Identifier
-test.pdf
-test.txt
-__pycache__/
-.venv/
-# AI Engineer Track - ignore large data
+# Large data - NEVER push
 chroma_db/
 chroma_db_backup_2026-10-11/
 day26/traces.jsonl
-day26/.dockerignore
-*.log
 day23_result.json
 day26_result.json
 day20_result.json
 day21_result.json
-hf_space/
-index.html
-venv/
-__pycache__/
-*.pyc
-run.sh
-# AI Engineer Track - ignore large data
-chroma_db/
-chroma_db_backup_2026-10-11/
-day26/traces.jsonl
-day26/.dockerignore
 *.log
-day23_result.json
-day26_result.json
-day20_result.json
-day21_result.json
-hf_space/
-index.html
 venv/
 __pycache__/
 *.pyc
-run.sh
+hf_space/
+index.html
