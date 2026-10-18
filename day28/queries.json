@@ -1,0 +1,17 @@
+[
+  "Explain stateful agentic RAG with LangGraph checkpoints using 1997 chunks",
+  "What does stateful mean in TypedDict State?",
+  "What does agentic mean with should_continue edge?",
+  "Why checkpoints matter?",
+  "How tool calling works search_chroma critique save_checkpoint?",
+  "What are 1997 chunks?",
+  "Explain supervisor pattern",
+  "How checkpointing enables resume after failure?",
+  "What is guardrail pattern?",
+  "How Docker 7.6GB reduced to 29.74MB?",
+  "How K8s deployment 2 replicas works?",
+  "What is evaluation swarm?",
+  "Explain tracing and observability?",
+  "How to evaluate RAG faithfulness?",
+  "Explain evaluation metrics avg_score latency?"
+]

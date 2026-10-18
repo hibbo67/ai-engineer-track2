@@ -1,0 +1,81 @@
+{
+  "avg_score": 0.87,
+  "total": 15,
+  "results": [
+    {
+      "id": 1,
+      "score": 0.9,
+      "q": "Explain stateful agentic RAG with LangGraph checkp"
+    },
+    {
+      "id": 2,
+      "score": 0.9,
+      "q": "What does stateful mean in TypedDict State?"
+    },
+    {
+      "id": 3,
+      "score": 0.85,
+      "q": "What does agentic mean with should_continue edge?"
+    },
+    {
+      "id": 4,
+      "score": 0.9,
+      "q": "Why checkpoints matter?"
+    },
+    {
+      "id": 5,
+      "score": 0.9,
+      "q": "How tool calling works search_chroma critique save"
+    },
+    {
+      "id": 6,
+      "score": 0.85,
+      "q": "What are 1997 chunks?"
+    },
+    {
+      "id": 7,
+      "score": 0.85,
+      "q": "Explain supervisor pattern"
+    },
+    {
+      "id": 8,
+      "score": 0.9,
+      "q": "How checkpointing enables resume after failure?"
+    },
+    {
+      "id": 9,
+      "score": 0.85,
+      "q": "What is guardrail pattern?"
+    },
+    {
+      "id": 10,
+      "score": 0.85,
+      "q": "How Docker 7.6GB reduced to 29.74MB?"
+    },
+    {
+      "id": 11,
+      "score": 0.85,
+      "q": "How K8s deployment 2 replicas works?"
+    },
+    {
+      "id": 12,
+      "score": 0.85,
+      "q": "What is evaluation swarm?"
+    },
+    {
+      "id": 13,
+      "score": 0.85,
+      "q": "Explain tracing and observability?"
+    },
+    {
+      "id": 14,
+      "score": 0.9,
+      "q": "How to evaluate RAG faithfulness?"
+    },
+    {
+      "id": 15,
+      "score": 0.85,
+      "q": "Explain evaluation metrics avg_score latency?"
+    }
+  ]
+}
