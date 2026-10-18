@@ -1,0 +1,19 @@
+{
+  "track": "AI Engineer Track 2 - 30 Days - 100% GOD - hibbo67",
+  "github": "hibbo67/ai-engineer-track2",
+  "latest": "095f70e Day29 96% GOD + 903b4c2 Day28 93% GOD + be9c9c5 Day27 90% GOD",
+  "stack": {
+    "RAG": "1997 chunks",
+    "Tools": "3 DIRECT TPM-safe 1800 tokens not 9502",
+    "tools.py": "300 per doc 900 cap Groq 8000 TPM safe",
+    "MCP": "6 tools",
+    "Memory": "19 checkpoints",
+    "Eval": "0.97 + Swarm 0.87 avg 15 queries",
+    "Docker": "29.74MB was 7.6GB freeze",
+    "K8s": "2 replicas livenessProbe /health limits 512Mi/1Gi HPA 2-5",
+    "Frontend": "Streamlit day29/app.py",
+    "Model": "openai/gpt-oss-20b Groq"
+  },
+  "progress": "30/30 = 100% GOD",
+  "tpm_safe": true
+}
