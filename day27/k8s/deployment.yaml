@@ -1,0 +1,57 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rag-1997
+  labels:
+    app: rag-1997
+    day: "27"
+    stack: "RAG+Tools+MCP+Memory+API+Docker+K8s"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: rag-1997
+  template:
+    metadata:
+      labels:
+        app: rag-1997
+        day: "27"
+        score: "0.97"
+    spec:
+      containers:
+            - name: rag-api
+        image: day25-rag-1997:latest
+        imagePullPolicy: IfNotPresent
+        ports:
+                - containerPort: 8000
+          name: http
+        env:
+                - name: GROQ_API_KEY
+          valueFrom:
+            secretKeyRef:
+              name: rag-secrets
+              key: groq-api-key
+              optional: true
+                - name: MODEL
+          value: "openai/gpt-oss-20b"
+                - name: CHUNKS
+          value: "1997"
+        resources:
+          requests:
+            memory: "512Mi"
+            cpu: "250m"
+          limits:
+            memory: "1Gi"
+            cpu: "500m"
+        livenessProbe:
+          httpGet:
+            path: /health
+            port: 8000
+          initialDelaySeconds: 30
+          periodSeconds: 10
+        readinessProbe:
+          httpGet:
+            path: /health
+            port: 8000
+          initialDelaySeconds: 10
+          periodSeconds: 5

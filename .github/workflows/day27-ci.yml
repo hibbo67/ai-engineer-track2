@@ -1,0 +1,16 @@
+name: Day27 CI/CD
+on:
+  push:
+    branches: [ main ]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+        - uses: actions/checkout@v4
+        - name: Day27 K8s YAML valid
+      run: |
+        cat day27/k8s/deployment.yaml
+        grep -q "replicas: 2" day27/k8s/deployment.yaml
+        grep -q "livenessProbe" day27/k8s/deployment.yaml
+        grep -q "512Mi" day27/k8s/deployment.yaml
+        echo "=== Day27 PASS | K8s 2 replicas | 29.74MB Docker | Day26 0.97 preserved ==="

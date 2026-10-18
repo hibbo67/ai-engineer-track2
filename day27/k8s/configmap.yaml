@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: rag-1997-config
+  labels:
+    app: rag-1997
+    day: "27"
+data:
+  MODEL: "openai/gpt-oss-20b"
+  CHUNKS: "1997"
+  SCORE: "0.97"
+  DOCKER_CONTEXT: "29.74MB"
